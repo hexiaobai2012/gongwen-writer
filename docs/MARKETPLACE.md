@@ -38,10 +38,14 @@ icon: https://raw.githubusercontent.com/hexiaobai2012/gongwen-writer/main/assets
 
 ## npm 发布
 
+本机有 npm 时：
+
 ```bash
 npm login
-npm publish
+npm publish --access public
 ```
+
+也可以使用 GitHub Actions：在仓库 **Settings → Secrets and variables → Actions** 添加 `NPM_TOKEN`（npm Automation Token），然后在 **Actions → Publish npm → Run workflow** 手动运行，或发布 GitHub Release 自动触发。
 
 发布后可在 DSH 中安装：
 

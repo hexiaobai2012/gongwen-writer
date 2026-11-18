@@ -1,0 +1,41 @@
+name: Bug report
+description: Report a reproducible problem in gongwen-writer
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。提交前请删除公文正文、姓名、电话、内网地址、密钥等敏感信息。
+  - type: input
+    id: version
+    attributes:
+      label: gongwen-writer version
+      placeholder: 2.4.0
+    validations:
+      required: true
+  - type: input
+    id: dsh
+    attributes:
+      label: DSH version and OS
+      placeholder: DSH 0.2.x, Windows 11
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the tool call or command, expected result, and actual result.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I removed secrets and sensitive document content from this report.
+          required: true

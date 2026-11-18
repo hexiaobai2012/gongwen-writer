@@ -1,0 +1,40 @@
+# Runtime data and generated documents
+.gongwen-writer/
+.gongwen-writer-kb/
+*.docx
+*.doc
+*.pdf
+preview.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+.yarn-error.log*
+
+# Local secrets and environment
+.env
+.env.*
+*.pem
+*.key
+*.p12
+
+# OS / editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+
+# Test and packaging output
+*.log
+*.tmp
+*.tgz
+dist/
+coverage/

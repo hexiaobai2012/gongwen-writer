@@ -1,0 +1,73 @@
+{
+  "name": "gongwen-writer",
+  "version": "2.4.0",
+  "description": "中文公文写作助手：首轮检索与框架候选、GB/T 9704 Word 渲染、实时打磨稿、逐段逐句推敲、官方来源事实核查、官方微信公众号与项目记忆。",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Alex",
+  "icon": "icon.svg",
+  "homepage": "https://github.com/hexiaobai2012/gongwen-writer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexiaobai2012/gongwen-writer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hexiaobai2012/gongwen-writer/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "gongwen",
+    "公文",
+    "docx",
+    "gb-t-9704",
+    "writing",
+    "chinese"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": {
+      "default": "./client.js"
+    },
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/",
+    "python/",
+    "locale/",
+    "docs/",
+    "assets/",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

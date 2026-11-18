@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="公文写作助手">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffdf8"/>
+      <stop offset="1" stop-color="#f4ead6"/>
+    </linearGradient>
+    <linearGradient id="pen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#cf3f34"/>
+      <stop offset="1" stop-color="#8f1f18"/>
+    </linearGradient>
+  </defs>
+  <rect x="3" y="3" width="58" height="58" rx="14" fill="#f7f1e6"/>
+  <rect x="3" y="3" width="58" height="58" rx="14" fill="none" stroke="#d9cbb2" stroke-width="1.5"/>
+  <path d="M17 12h23l9 9v31a3 3 0 0 1-3 3H17a3 3 0 0 1-3-3V15a3 3 0 0 1 3-3z" fill="url(#paper)" stroke="#b9a88c" stroke-width="1.5"/>
+  <path d="M40 12v8.5a1.5 1.5 0 0 0 1.5 1.5H49" fill="#efe2c9" stroke="#b9a88c" stroke-width="1.5" stroke-linejoin="round"/>
+  <rect x="20" y="15.5" width="16" height="3" rx="1.5" fill="#b33127"/>
+  <rect x="20" y="23" width="24" height="1.8" rx="0.9" fill="#d8c8ad"/>
+  <rect x="20" y="28" width="24" height="1.8" rx="0.9" fill="#d8c8ad"/>
+  <rect x="20" y="33" width="18" height="1.8" rx="0.9" fill="#d8c8ad"/>
+  <rect x="20" y="38" width="21" height="1.8" rx="0.9" fill="#d8c8ad"/>
+  <path d="M41.5 30.5l6.2 6.2-11.4 11.4-7.4 1.2 1.2-7.4z" fill="url(#pen)" stroke="#6f1712" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M41.5 30.5l6.2 6.2 2.6-2.6a4.4 4.4 0 0 0-6.2-6.2z" fill="#e0655b" stroke="#6f1712" stroke-width="1.2" stroke-linejoin="round"/>
+  <circle cx="44.5" cy="47.5" r="7.2" fill="#ffffff" fill-opacity="0.18" stroke="#b33127" stroke-width="2"/>
+  <path d="M41 47.5l2.3 2.3 4.2-4.6" fill="none" stroke="#b33127" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

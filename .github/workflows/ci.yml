@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Check JavaScript syntax
+        run: |
+          for f in index.js client.js lib/*.js; do
+            node --check "$f"
+          done
+      - name: Validate JSON
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('package.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('locale/zh.json','utf8'))"
+          node -e "JSON.parse(require('fs').readFileSync('locale/en.json','utf8'))"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Python syntax
+        run: |
+          python -m py_compile python/render_docx.py python/extract_docx.py
+          rm -rf python/__pycache__
+      - name: Pack dry run
+        run: npm pack --dry-run
